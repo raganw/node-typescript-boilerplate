@@ -1,0 +1,25 @@
+name: Node.js CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - name: Install tools from asdf config
+        uses: ai/asdf-cache-action@v1
+      - name: Install dependencies
+        run: pnpm install --ignore-scripts --frozen-lockfile
+      - name: Type Check
+        run: pnpm run --if-present type-check
+      - name: Lint
+        run: pnpm run --if-present lint
+      - name: Prettier
+        run: pnpm run --if-present prettier:check
+      - name: Run tests
+        run: pnpm test
+      - name: Build
+        run: pnpm run --if-present build
