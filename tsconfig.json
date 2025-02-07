@@ -17,7 +17,11 @@
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "paths": {
+      "@src/*": ["src/*"]
+    },
+    "baseUrl": "."
   },
-  "include": ["src"]
+  "include": ["src", "tests", "vitest.config.mts"]
 }

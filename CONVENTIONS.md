@@ -1,0 +1,7 @@
+- Use `Array<T>` instead of `T[]` for array type definitions
+- Use double quotes `"` instead of single quotes `'`, unless it aids with readability
+- Name files using kebab-case (`my-file.ts`) instead of camelCase
+- Must include `.js` extension for file imports per ES module spec
+- Don't use `null` (use undefined instead)
+- Use braces around case blocks in switch statements
+- Write tests using vitest, with test file begin named the same as the file it is testing, with the addition of `.test` before the extension, and residing in the same directory as the file it is testing

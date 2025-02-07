@@ -55,10 +55,10 @@ export default tseslint.config(
     },
   },
   {
-    files: ["eslint.config.mjs"],
+    files: ["eslint.config.mjs", "vitest.config.mts"],
   },
   {
-    files: ["__tests__/**"],
+    files: ["**/*.test.*"],
 
     plugins: {
       vitest,
@@ -77,6 +77,13 @@ export default tseslint.config(
     languageOptions: {
       globals: {
         ...vitest.environments.env.globals,
+        ...globals.node,
+      },
+      parser: tseslint.parser,
+      ecmaVersion: 2020,
+      sourceType: "module",
+      parserOptions: {
+        project: "./tsconfig.json",
       },
     },
   },
