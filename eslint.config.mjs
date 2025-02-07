@@ -25,6 +25,8 @@ export default tseslint.config(
     },
 
     rules: {
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/no-process-exit": "off",
       "@typescript-eslint/explicit-function-return-type": "warn",
       "@typescript-eslint/no-unused-vars": [
         "error",

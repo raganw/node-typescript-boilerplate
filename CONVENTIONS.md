@@ -1,4 +1,6 @@
 - Use `Array<T>` instead of `T[]` for array type definitions
+- Do not use Array#reduce() and Array#reduceRight()
+- Prefer for...of over the forEach method
 - Use double quotes `"` instead of single quotes `'`, unless it aids with readability
 - Name files using kebab-case (`my-file.ts`) instead of camelCase
 - Must include `.js` extension for file imports per ES module spec
